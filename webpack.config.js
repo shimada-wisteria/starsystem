@@ -8,7 +8,7 @@ module.exports = {
         index: path.join(__dirname, 'src/scripts', 'index.js')
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         filename: 'main.js'
     },
     resolve: {
