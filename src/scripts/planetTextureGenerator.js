@@ -62,6 +62,7 @@ function createLavaTexture(scene, index) {
         new BABYLON.Color3(0.9, 0.2, 0.0),
         new BABYLON.Color3(1.0, 0.5, 0.0),
         new BABYLON.Color3(1.0, 0.8, 0.1),
+        new BABYLON.Color3(1.0, 1.0, 0.6),
     ];
     return { diffuse: tex, emissive: tex };
 }

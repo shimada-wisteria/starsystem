@@ -1,5 +1,5 @@
 import * as BABYLON from '@babylonjs/core';
-import { Inspector } from '@babylonjs/inspector';
+// import { Inspector } from '@babylonjs/inspector';
 import { BackStars } from "./backgroundStars.js";
 import { PlanetarySystem } from "./planetarySystem.js";
 
@@ -58,18 +58,6 @@ class Playground {
         return scene;
     }
 }
-
-// const WASD_KEYS = {
-//     name: 'WASD_KEYS',
-//     init() { },
-//     attach(self) {
-//         self.keysUp.push('W'.charCodeAt(0));
-//         self.keysLeft.push('A'.charCodeAt(0));
-//         self.keysDown.push('S'.charCodeAt(0));
-//         self.keysRight.push('D'.charCodeAt(0));
-//     },
-//     detach() { }
-// };
 
 const createScene = function () {
     return Playground.CreateScene(engine, engine.getRenderingCanvas());
