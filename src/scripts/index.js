@@ -29,12 +29,10 @@ class Playground {
         scene.clearColor = new BABYLON.Color4(0, 0, 0.05, 1);
         scene.ambientColor = new BABYLON.Color3(1, 1, 1);
         // This creates and positions a free camera (non-mesh)
-        const camera = new BABYLON.UniversalCamera("camera1", new BABYLON.Vector3(0, 0, -10), scene);
-        // camera.addBehavior(WASD_KEYS);
+        const camera = new BABYLON.UniversalCamera("camera1", new BABYLON.Vector3(0, 50, -150), scene);
+        camera.setTarget(new BABYLON.Vector3(0, 0, 0));
         camera.inertia = 0.7;
-        // This attaches the camera to the canvas
         camera.attachControl(canvas, true);
-        camera.position.set(0, 0, -150);
 
         const environmentLight = new BABYLON.HemisphericLight('environmentLight', new BABYLON.Vector3(0, 1, 0), scene);
         environmentLight.intensity = 0.5;
@@ -45,11 +43,10 @@ class Playground {
         const backStars = new BackStars('backStars', scene);
         const planetarySystem = new PlanetarySystem('planetarySystem', scene);
 
-        // const glow = new BABYLON.GlowLayer('glow', scene, {
-        //     blurKernelSize: 32
-        // });
-        // glow.intensity = 1;
-        // glow.isEnabled = false;
+        const glow = new BABYLON.GlowLayer('glow', scene, {
+            blurKernelSize: 64
+        });
+        glow.intensity = 0.8;
         scene.freezeActiveMeshes();
         // scene.freezeMaterials();
 
